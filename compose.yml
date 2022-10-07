@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+
+  db:
+    image: postgis/postgis:14-3.2
+    environment:
+      - POSTGRES_DB=$PGDATABASE
+      - POSTGRES_USER=$PGUSER
+      - POSTGRES_PASSWORD=$PGPASSWORD
+    ports:
+      - '$PGPORT:$PGPORT'
+    volumes: 
+      - db:/var/lib/postgresql/data
+      - ./db/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+    command: -p $PGPORT
+    networks:
+      - backend
+
+  api:
+    image: api
+    build: './api'
+    environment:
+      - API_PORT=$API_PORT
+      - PGHOST=db
+      - PGPORT=$PGPORT
+      - PGUSER=$PGUSER
+      - PGPASSWORD=$PGPASSWORD
+      - PGDATABASE=$PGDATABASE
+    ports:
+      - '3001:3001'
+    depends_on:
+      - db
+    networks:
+      - backend
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  backend:
+    attachable: true
+
