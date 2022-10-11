@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 const mountRoutes = require('./routes')
 mountRoutes(app)
 
-app.use(express.static(path.join('client','static')));
+app.use(express.static(path.join(__dirname,'client')))
 
 app.get('/jsapi-geojson-edit', function (req, res) {
   res.sendFile(path.join(__dirname,'client', 'index.html'));
