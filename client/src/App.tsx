@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
 
   const poiGeojsonLayer = new GeoJSONLayer({
-    url: `http://localhost:3001/poi`,
+    url: `https://jge.zpdev.app/poi`,
     editingEnabled: true,
     fields: poiFields,
     popupTemplate: poiPopupTemplate,
