@@ -3,8 +3,6 @@ import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
 import Query from "@arcgis/core/rest/support/Query";
 import { arcgisToGeoJSON } from "@terraformer/arcgis";
 
-
-// const baseUrl = "http://localhost:3001";
 const backend = axios.create({})
 
 function a2g(layer:GeoJSONLayer, ids:number[]){
