@@ -4,6 +4,7 @@ import Query from "@arcgis/core/rest/support/Query";
 import { arcgisToGeoJSON } from "@terraformer/arcgis";
 
 const backend = axios.create({})
+const baseUrl = 'https://jge.zpdev.app'
 
 function a2g(layer:GeoJSONLayer, ids:number[]){
   return new Promise((resolve, reject) => {
@@ -46,24 +47,24 @@ interface commentSubmission{
 const api = {
 
   getPois: (body: Object, poi_id: number ) => {
-    return backend.get(`/poi`, body);
+    return backend.get(`${baseUrl}/poi`, body);
   },
 
   updateManyPois: async (layer: GeoJSONLayer, ids:number[]) => {
     var features = await a2g(layer,ids)
-    return backend.put(`/poi/editMany`, features);
+    return backend.put(`${baseUrl}/poi/editMany`, features);
   },
 
   getComments: (poi_id: number ) => {
-    return backend.get(`/comment/${poi_id}`);
+    return backend.get(`${baseUrl}/comment/${poi_id}`);
   },
 
   createComment: (body:commentSubmission) => {
-    return backend.post(`/comment/${body.poi_id}`, body);
+    return backend.post(`${baseUrl}/comment/${body.poi_id}`, body);
   },
 
   deleteComment: (comment_id: number) => {
-    return backend.delete(`/comment/${comment_id}`);
+    return backend.delete(`${baseUrl}/comment/${comment_id}`);
   },
 
 };
