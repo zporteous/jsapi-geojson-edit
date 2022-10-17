@@ -1,4 +1,4 @@
-import axios, { AxiosPromise} from "axios";
+import axios from "axios";
 import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
 import Query from "@arcgis/core/rest/support/Query";
 import { arcgisToGeoJSON } from "@terraformer/arcgis";
