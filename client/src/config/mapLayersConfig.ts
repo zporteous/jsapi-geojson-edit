@@ -184,7 +184,6 @@ export const renderer = new UniqueValueRenderer({
   field: "poi_type",
   // defaultSymbol: ,  
   uniqueValueInfos: [{
-    // All features with value of "North" will be blue
     value: "Mountain",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/stickers/100/000000/mountain.png",
@@ -192,7 +191,6 @@ export const renderer = new UniqueValueRenderer({
       height:"50px"
     })
   }, {
-    // All features with value of "East" will be green
     value: "River",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-river-vacation-planning-adventure-flaticons-lineal-color-flat-icons.png",
@@ -200,7 +198,6 @@ export const renderer = new UniqueValueRenderer({
       height:"40px"
     })
   }, {
-    // All features with value of "South" will be red
     value: "Hike",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-hiking-summer-travel-flaticons-lineal-color-flat-icons.png",
@@ -208,7 +205,6 @@ export const renderer = new UniqueValueRenderer({
       height:"40px"
     })
   }, {
-    // All features with value of "West" will be yellow
     value: "Waterfall",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-waterfall-adventure-wanicon-flat-wanicon.png",
@@ -216,7 +212,6 @@ export const renderer = new UniqueValueRenderer({
       height:"40px"
     })
   },{
-    // All features with value of "South" will be red
     value: "Meadow",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/external-filled-color-icons-papa-vector/78/000000/external-Meadow-land-types-filled-color-icons-papa-vector.png",
@@ -224,7 +219,6 @@ export const renderer = new UniqueValueRenderer({
       height:"40px"
     })
   },{
-    // All features with value of "South" will be red
     value: "Lake",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/plasticine/100/000000/lake.png",
@@ -232,7 +226,6 @@ export const renderer = new UniqueValueRenderer({
       height:"40px"
     })
   },{
-    // All features with value of "South" will be red
     value: "Fishing",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/stickers/100/000000/fishing-pole.png",
@@ -240,7 +233,6 @@ export const renderer = new UniqueValueRenderer({
       height:"50px"
     })
   },{
-    // All features with value of "South" will be red
     value: "Camping",
     symbol: new PictureMarkerSymbol( {
       url: "https://img.icons8.com/emoji/48/000000/camping.png",

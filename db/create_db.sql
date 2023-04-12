@@ -37,10 +37,6 @@ CREATE TRIGGER comment_count
 AFTER INSERT OR DELETE ON comments
     FOR EACH ROW EXECUTE FUNCTION comment_count();
 
--- DELETE b FROM BLOB b 
---   LEFT JOIN FILES f ON f.id = b.fileid 
---       WHERE f.id IS NULL
-
 insert into poi (poi_name, poi_type, description, geom) values 
 ('Mt. Ellinor','Mountain', 'I am sample location 1!!', 'POINT(-123.26177747370306 47.52181740389976)'),
 ('Dosewallips River', 'River', 'I am sample location 2!!', 'POINT(-123.05475035903785 47.7399822021308)'),
