@@ -83,22 +83,22 @@ function App() {
     })
 
     let fs:any = {layer:poiGeojsonLayer} // new generic to fix typescript error
-      const editor = new Editor({
-        view: view,
-        layerInfos: [
-          {
-            layer: poiGeojsonLayer as unknown as FeatureLayer,
-            addEnabled:true,
-            updateEnabled:false,
-            deleteEnabled:false,
-            formTemplate: formTemplate
-          }
-        ],
-        snappingOptions: {
-          enabled: true,
-          featureSources: [fs] 
+    const editor = new Editor({
+      view: view,
+      layerInfos: [
+        {
+          layer: poiGeojsonLayer as unknown as FeatureLayer,
+          addEnabled:true,
+          updateEnabled:false,
+          deleteEnabled:false,
+          formTemplate: formTemplate
         }
-      });
+      ],
+      snappingOptions: {
+        enabled: true,
+        featureSources: [fs] 
+      }
+    });
 
     const editorExpand = new Expand({
       view: view,
